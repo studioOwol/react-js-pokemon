@@ -5,7 +5,7 @@ const AutoComplete = ({ allPokemons, setDisplayedPokemons }) => {
 
   const filterNames = (input) => {
     const value = input.toLowerCase();
-    return value ? allPokemons.filter((e) => e.name.includes(value)) : [];
+    return value ? allPokemons.filter((e) => e.name.startsWith(value)) : [];
   };
 
   const handleSubmit = (e) => {
